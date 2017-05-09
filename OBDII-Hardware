@@ -1,0 +1,50 @@
+GERAL
+4 e 5 -  GND
+16 - +12V
+Obter dados da Electronic Control Unit (ECU)
+veículo (onboard) >--Parameter Identification (PID)--> aparelho scanner (offboard)
+
+---------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
+
+**********ISO 15765-4 ***********
+
+Controller Area Network (CAN) - 500kbps 
+04 - GND                 1  2  3  4  5  6  7  8  
+05 - GND                 9 10 11 12 13 14 15 16  (arranjo)
+06 - CAN HIGH
+14 - CAN LOW
+16 - +12V
+
+Serviços:
+http://read.pudn.com/downloads122/doc/comm/520493/%E6%A0%87%E5%87%86/saeJ1979_2006-08-25Ballot.pdf (ANEX B)
+
+$01 - mostra PIDs suportados  
+$02 - ?
+$03 - Fuel system status
+$04 - valor LOAD calculado
+$05 - Temperatura do flúido de arrefecimento do motor
+$06 - Redundância combustível (curto prazo bancos 1 e 3)
+$07 - Redundância combustível (longo prazo bancos 1 e 3) 
+$08 - Redundância combustível (curto prazo bancos 2 e 4)
+$09 - Redundância combustível (longo prazo bancos 2 e 4) (?)
+$0A - Pressão bicos injetores (kPa)
+$0B - Pressão de entrada no motor (kPa)
+$0C - Rotações por minuto do motor (rpm)
+$0D - Velocidade do veículo (km/h)
+$0E - Avanço/defasagem da faísca de ignição (º)
+$0F - Temperatura do ar na entrada (ºC)
+$10 - Fluxo de ar (g/s)
+$11 - Posição relativa do acelerador (%)
+$12 - "status ar" ?
+$13 - Localização dos sensores de oxigênio
+...
+$1B - Localização dos sensores de oxigênio
+$1C - Requerimentos para o qual o carro foi desenhado
+$1D - Localização dos sensores de oxigênio
+$1E - ?
+$1F - Tempo com o motor ligado
+$21 - Distância viajada desde que MIL está ligado 
+$22 - Pressão dos bicos injetores comparado ao vácuo na entrada do motor?
+...
+~256 funções
